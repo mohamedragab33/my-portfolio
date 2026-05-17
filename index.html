@@ -5,9 +5,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Mohamed Ragab Portfolio</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Mohamed Ragab Elkazzaz — Senior Java Backend Engineer</title>
+  <meta content="Mohamed Ragab Elkazzaz — Senior Java Backend Engineer with 6+ years of experience building scalable, cloud-native microservices across telecom, healthcare, fintech, and e-commerce." name="description">
+  <meta content="Java, Spring Boot, Quarkus, Microservices, Kubernetes, Kafka, Vert.x, Kotlin, Cloud Native, Senior Backend Engineer, System Design" name="keywords">
+  <meta property="og:title" content="Mohamed Ragab Elkazzaz — Senior Java Backend Engineer">
+  <meta property="og:description" content="6+ years building scalable cloud-native microservices. Java, Spring Boot, Quarkus, Kafka, Kubernetes.">
+  <meta property="og:type" content="website">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -27,12 +30,148 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: iPortfolio - v3.10.0
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    /* Custom enhancements */
+    .badge-tech {
+      display: inline-block;
+      padding: 6px 12px;
+      margin: 4px 4px 4px 0;
+      background: #f1f8ff;
+      color: #149ddd;
+      border: 1px solid #d8ecff;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .badge-tech:hover {
+      background: #149ddd;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    .skills-group {
+      margin-bottom: 30px;
+    }
+    .skills-group h4 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #173b6c;
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #149ddd;
+      display: inline-block;
+    }
+    .skills-group h4 i {
+      color: #149ddd;
+      margin-right: 8px;
+    }
+    .service-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 30px rgba(63, 60, 86, 0.08);
+      height: 100%;
+      transition: all 0.3s ease;
+      margin-bottom: 30px;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(63, 60, 86, 0.15);
+    }
+    .service-card .icon {
+      width: 64px;
+      height: 64px;
+      background: #149ddd;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .service-card .icon i {
+      font-size: 28px;
+      color: #fff;
+    }
+    .service-card h4 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #173b6c;
+      margin-bottom: 12px;
+    }
+    .service-card p {
+      color: #6c757d;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .resume-item h5.location {
+      color: #149ddd;
+      font-style: italic;
+      font-weight: 500;
+    }
+    .freelance-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(63, 60, 86, 0.08);
+      margin-bottom: 25px;
+      border-left: 4px solid #149ddd;
+    }
+    .freelance-card h4 {
+      color: #173b6c;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    .freelance-card .client {
+      color: #149ddd;
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .freelance-card .duration {
+      color: #6c757d;
+      font-size: 13px;
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+    .freelance-card ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+    .freelance-card ul li {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 6px;
+    }
+    .cert-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(63, 60, 86, 0.08);
+      text-align: center;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    .cert-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 25px rgba(63, 60, 86, 0.15);
+    }
+    .cert-card i {
+      font-size: 40px;
+      color: #149ddd;
+      margin-bottom: 15px;
+    }
+    .cert-card h4 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #173b6c;
+      margin: 0;
+    }
+    @media (max-width: 768px) {
+      .badge-tech { font-size: 12px; padding: 4px 10px; }
+    }
+  </style>
 </head>
 
 <body>
@@ -45,13 +184,13 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <img src="assets/img/profile-img.jpg" alt="Mohamed Ragab Elkazzaz" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Mohamed Ragab</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="https://twitter.com/midoo_ragab33" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="https://www.facebook.com/profile.php?id=100042562294566" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="https://www.instagram.com/midoo_ragab" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/mohamed-ragab-86b521183/" class="linkedin"><i class="bx bxl-linkedin"></i></a>       
+          <a href="https://github.com/mohamedragab33" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+          <a href="https://www.linkedin.com/in/mohamed-ragab-86b521183/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://twitter.com/midoo_ragab33" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="mailto:mohamed.ragab.dv@gmail.com" class="email"><i class="bx bx-envelope"></i></a>
         </div>
       </div>
 
@@ -59,8 +198,12 @@
         <ul>
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-		  <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Skills</span></a></li>		  
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>		  
+          <li><a href="#facts" class="nav-link scrollto"><i class="bx bx-bar-chart-square"></i> <span>Facts</span></a></li>
+          <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-cog"></i> <span>Skills</span></a></li>
+          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-briefcase"></i> <span>Services</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file"></i> <span>Resume</span></a></li>
+          <li><a href="#freelance" class="nav-link scrollto"><i class="bx bx-code-alt"></i> <span>Projects</span></a></li>
+          <li><a href="#certifications" class="nav-link scrollto"><i class="bx bx-award"></i> <span>Certificates</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -70,8 +213,8 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
-      <h1>Mohamed Ragab</h1>
-      <p>I'm <span class="typed" data-typed-items="Software Engineer,Software Developer, Freelancer"></span></p>
+      <h1>Mohamed Ragab Elkazzaz</h1>
+      <p>I'm a <span class="typed" data-typed-items="Senior Java Backend Engineer, Microservices Architect, Cloud-Native Developer, System Design Engineer, Kotlin Developer"></span></p>
     </div>
   </section><!-- End Hero -->
 
@@ -83,29 +226,32 @@
 
         <div class="section-title">
           <h2>About</h2>
-          <p>I have over 3 years of experience as a software engineer In the full SDLC creating dynamic web applications. Updates functionality based on customer requirements to ensure
-excellent user</p>
+          <p>Senior Java Backend Engineer with 6+ years of experience building scalable, cloud-native microservices across telecom, healthcare, fintech, and e-commerce. Strong expertise in system design, distributed systems, and CI/CD, with proven ability to deliver high-impact solutions and lead engineering teams.</p>
         </div>
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="Mohamed Ragab">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Software Developer &amp; Web Developer.</h3>
+            <h3>Senior Java Backend Engineer &amp; Microservices Architect</h3>
+            <p class="fst-italic">
+              I architect and deliver cloud-native, event-driven systems for international clients across telecom, healthcare, and fintech. I have led migrations from monoliths to microservices, designed CI/CD pipelines using GitOps, and mentored engineering teams across multiple time zones.
+            </p>
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>7 Sep 1998</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+201025021692</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Tanta , Egypt</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Full Name:</strong> <span>Mohamed Ragab Elkazzaz</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+20 1025021692</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Giza, Egypt</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Experience:</strong> <span>6+ Years</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>24</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>bachelor</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>mohamed.ragab.dv@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor of Information Systems</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>mohamed.ragab.dv@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Languages:</strong> <span>Arabic (Native), English</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
                 </ul>
               </div>
@@ -122,39 +268,40 @@ excellent user</p>
 
         <div class="section-title">
           <h2>Facts</h2>
+          <p>A snapshot of my professional journey building enterprise-scale systems.</p>
         </div>
 
         <div class="row no-gutters">
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
             <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="60" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Happy Clients</strong></p>
+              <i class="bi bi-clock-history"></i>
+              <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Years of Experience</strong></p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="count-box">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="56" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Projects</strong></p>
+              <i class="bi bi-diagram-3"></i>
+              <span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Microservices Delivered</strong></p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="count-box">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1300" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hours Of Support</strong></p>
+              <i class="bi bi-building"></i>
+              <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Companies &amp; Clients</strong></p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="count-box">
-              <i class="bi bi-people"></i>
+              <i class="bi bi-globe2"></i>
               <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hard Workers</strong></p>
+              <p><strong>Countries Served</strong></p>
             </div>
           </div>
 
@@ -169,234 +316,120 @@ excellent user</p>
 
         <div class="section-title">
           <h2>Skills</h2>
+          <p>A comprehensive toolkit for designing, building, and operating production-grade distributed systems.</p>
         </div>
 
-        <div class="row skills-content">
+        <div class="row">
 
           <div class="col-lg-6" data-aos="fade-up">
 
-            <div class="progress">
-              <span class="skill">JAVA && Advanced Java <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+            <div class="skills-group">
+              <h4><i class="bi bi-code-slash"></i>Programming Languages</h4>
+              <span class="badge-tech">Java (8, 11, 17)</span>
+              <span class="badge-tech">Kotlin</span>
+              <span class="badge-tech">Python</span>
+              <span class="badge-tech">C# / .NET Core</span>
+              <span class="badge-tech">SQL / PL-SQL</span>
+              <span class="badge-tech">JavaScript</span>
             </div>
 
-<div class="progress">
-              <span class="skill">Kotlin <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+            <div class="skills-group">
+              <h4><i class="bi bi-layers"></i>Frameworks &amp; Backend</h4>
+              <span class="badge-tech">Spring Boot</span>
+              <span class="badge-tech">Spring MVC</span>
+              <span class="badge-tech">Spring Security</span>
+              <span class="badge-tech">Spring Data</span>
+              <span class="badge-tech">Spring WebFlux</span>
+              <span class="badge-tech">Quarkus</span>
+              <span class="badge-tech">Vert.x</span>
+              <span class="badge-tech">Ktor</span>
+              <span class="badge-tech">Hibernate / JPA</span>
+              <span class="badge-tech">Jakarta EE</span>
             </div>
 
-<div class="progress">
-              <span class="skill">Multi-threading <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+            <div class="skills-group">
+              <h4><i class="bi bi-diagram-3"></i>System Design &amp; Architecture</h4>
+              <span class="badge-tech">Microservices</span>
+              <span class="badge-tech">Distributed Systems</span>
+              <span class="badge-tech">Event-Driven Architecture</span>
+              <span class="badge-tech">REST API Design</span>
+              <span class="badge-tech">Async Processing</span>
+              <span class="badge-tech">Resilience Patterns</span>
+              <span class="badge-tech">High Availability</span>
+              <span class="badge-tech">Scalability</span>
             </div>
 
-<div class="progress">
-              <span class="skill">J2EE <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-<div class="progress">
-              <span class="skill">Spring <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-<div class="progress">
-              <span class="skill">Spring MVC <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-<div class="progress">
-              <span class="skill">Spring Boot <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-<div class="progress">
-              <span class="skill">Spring security <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-<div class="progress">
-              <span class="skill">Jersey <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Java Swing <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">JPA <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>        
-
-			<div class="progress">
-              <span class="skill">Vert.x <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>         
-
-			<div class="progress">
-              <span class="skill">OOP <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>         
-
-			<div class="progress">
-              <span class="skill">JavaScript <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>           
-
-			<div class="progress">
-              <span class="skill">XML - JSON <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>     
-
-			<div class="progress">
-              <span class="skill">IntelliJ <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>      
-
-			<div class="progress">
-              <span class="skill">Eclipse - Net Beans - Spring Tool Suite (STS) - Visual studio - Visual studio code  <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+            <div class="skills-group">
+              <h4><i class="bi bi-cloud"></i>Cloud &amp; DevOps</h4>
+              <span class="badge-tech">AWS</span>
+              <span class="badge-tech">Kubernetes (K8s)</span>
+              <span class="badge-tech">Docker</span>
+              <span class="badge-tech">Helm</span>
+              <span class="badge-tech">Jenkins</span>
+              <span class="badge-tech">ArgoCD (GitOps)</span>
+              <span class="badge-tech">Terraform</span>
+              <span class="badge-tech">CI/CD Pipelines</span>
+              <span class="badge-tech">SonarQube</span>
+              <span class="badge-tech">Nexus / JFrog</span>
             </div>
 
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
 
-            <div class="progress">
-              <span class="skill">Hibernate <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+            <div class="skills-group">
+              <h4><i class="bi bi-database"></i>Databases</h4>
+              <span class="badge-tech">Oracle</span>
+              <span class="badge-tech">MongoDB</span>
+              <span class="badge-tech">PostgreSQL</span>
+              <span class="badge-tech">MySQL</span>
+              <span class="badge-tech">SQL Server</span>
+              <span class="badge-tech">Redis</span>
+              <span class="badge-tech">H2</span>
+              <span class="badge-tech">Liquibase</span>
+              <span class="badge-tech">Flyway</span>
             </div>
 
-            <div class="progress">
-              <span class="skill">SQL Server <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+            <div class="skills-group">
+              <h4><i class="bi bi-chat-dots"></i>Messaging &amp; Streaming</h4>
+              <span class="badge-tech">Apache Kafka</span>
+              <span class="badge-tech">RabbitMQ</span>
+              <span class="badge-tech">AMQP</span>
             </div>
 
-            <div class="progress">
-              <span class="skill">JDBC <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+            <div class="skills-group">
+              <h4><i class="bi bi-search"></i>Search &amp; Content</h4>
+              <span class="badge-tech">Elasticsearch</span>
+              <span class="badge-tech">Adobe Experience Manager (AEM)</span>
+              <span class="badge-tech">Contentful (Headless CMS)</span>
             </div>
-   <div class="progress">
-              <span class="skill">-Postgresql <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+
+            <div class="skills-group">
+              <h4><i class="bi bi-shield-lock"></i>Security &amp; Identity</h4>
+              <span class="badge-tech">Keycloak</span>
+              <span class="badge-tech">OAuth 2.0</span>
+              <span class="badge-tech">JWT</span>
+              <span class="badge-tech">Spring Security</span>
             </div>
-   <div class="progress">
-              <span class="skill">MY-SQL <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+
+            <div class="skills-group">
+              <h4><i class="bi bi-bar-chart"></i>Observability &amp; Monitoring</h4>
+              <span class="badge-tech">Dynatrace</span>
+              <span class="badge-tech">Splunk</span>
+              <span class="badge-tech">Datadog</span>
+              <span class="badge-tech">Prometheus</span>
+              <span class="badge-tech">Grafana</span>
             </div>
-   <div class="progress">
-              <span class="skill">ORACLE <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-   <div class="progress">
-              <span class="skill">Proficient in writing SQL queries,PL/SQL stored procedures, Triggers And creating business tables. <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-   <div class="progress">
-              <span class="skill">MAVEN <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-   <div class="progress">
-              <span class="skill">Gradle <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-   <div class="progress">
-              <span class="skill">GIT (Gitlab -Github) <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-   <div class="progress">
-              <span class="skill">Tortoise SVN <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-  <div class="progress">
-              <span class="skill">-JUnit 5 <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-  <div class="progress">
-              <span class="skill">-Elasticsearch <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-  <div class="progress">
-              <span class="skill">Swagger. Open API 3.0 <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>  
-			
-			<div class="progress">
-              <span class="skill">-Docker <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>  
-			
-			<div class="progress">
-              <span class="skill">-C# - .net core - Linq - Entity framework <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+
+            <div class="skills-group">
+              <h4><i class="bi bi-tools"></i>Tools &amp; Testing</h4>
+              <span class="badge-tech">Git (GitHub, GitLab)</span>
+              <span class="badge-tech">Maven</span>
+              <span class="badge-tech">Gradle</span>
+              <span class="badge-tech">Swagger / OpenAPI</span>
+              <span class="badge-tech">JUnit 5</span>
+              <span class="badge-tech">Mockito</span>
+              <span class="badge-tech">Jira / Confluence</span>
             </div>
 
           </div>
@@ -406,73 +439,162 @@ excellent user</p>
       </div>
     </section><!-- End Skills Section -->
 
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>What I Do</h2>
+          <p>End-to-end backend engineering services for products that need to scale.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="service-card">
+              <div class="icon"><i class="bi bi-diagram-3"></i></div>
+              <h4>Microservices Architecture</h4>
+              <p>Design and deliver cloud-native microservices using Spring Boot, Quarkus, and Vert.x — with clean domain boundaries, resilience patterns, and observability built in from day one.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card">
+              <div class="icon"><i class="bi bi-arrow-repeat"></i></div>
+              <h4>Monolith → Microservices Migration</h4>
+              <p>Decompose legacy monoliths into well-bounded services with zero-downtime cutover strategies, schema evolution (Liquibase / Flyway), and incremental rollout via feature flags.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card">
+              <div class="icon"><i class="bi bi-broadcast"></i></div>
+              <h4>Event-Driven Systems</h4>
+              <p>Kafka and RabbitMQ-based event pipelines with idempotent consumers, dead-letter handling, and exactly-once processing patterns for mission-critical workloads.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card">
+              <div class="icon"><i class="bi bi-cloud-upload"></i></div>
+              <h4>Cloud-Native &amp; Kubernetes</h4>
+              <p>Production-grade Kubernetes deployments with Helm, ArgoCD (GitOps), Docker, and AWS — including auto-scaling, health probes, and progressive delivery.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card">
+              <div class="icon"><i class="bi bi-gear-wide-connected"></i></div>
+              <h4>CI/CD &amp; DevOps</h4>
+              <p>Jenkins pipelines, GitOps with ArgoCD, automated quality gates with SonarQube, and artifact management with Nexus / JFrog — shipping faster with confidence.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card">
+              <div class="icon"><i class="bi bi-people"></i></div>
+              <h4>Technical Leadership &amp; Mentoring</h4>
+              <p>Lead distributed engineering teams across time zones, run code reviews and architecture governance, and mentor junior and mid-level engineers on Java best practices.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
     <!-- ======= Resume Section ======= -->
     <section id="resume" class="resume">
       <div class="container">
 
         <div class="section-title">
           <h2>Resume</h2>
+          <p>6+ years engineering backend systems for telecom, healthcare, tourism, and desktop platforms.</p>
         </div>
 
         <div class="row">
           <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Sumary</h3>
+            <h3 class="resume-title">Summary</h3>
             <div class="resume-item pb-0">
-              <h4>Mohamed Ragab</h4>
-              <p><em>I have over 3 years of experience as a software engineer In the full SDLC creating dynamic web applications. Updates functionality based on customer requirements to ensure excellent user.</em></p>
+              <h4>Mohamed Ragab Elkazzaz</h4>
+              <p><em>Senior Java Backend Engineer with 6+ years of experience building scalable, cloud-native microservices across telecom, healthcare, fintech, and e-commerce. Strong expertise in system design, distributed systems, and CI/CD, with proven ability to deliver high-impact solutions and lead engineering teams.</em></p>
               <ul>
                 <li>Giza, Egypt</li>
-                <li>+201025021692</li>
+                <li>+20 1025021692</li>
                 <li>mohamed.ragab.dv@gmail.com</li>
               </ul>
             </div>
 
             <h3 class="resume-title">Education</h3>
             <div class="resume-item">
-              <h4>bachelor of information systems</h4>
-              <h5> 2016 - 2020</h5>
-              <p><em>Faculty of computer and information Menofia University</em></p>             
+              <h4>Bachelor of Information Systems</h4>
+              <h5>2016 - 2020</h5>
+              <p><em>Faculty of Computer and Information, Menofia University</em></p>
+              <p>Graduation Project Grade: <strong>Excellent</strong> — Role: Database Designer, System Analyst, Documentation Manager. Delivered system &amp; user requirements analysis, database design, and full UML modeling (Use Case, Sequence, State diagrams) for a Flutter application.</p>
             </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Professional Experience</h3>
+
+            <h3 class="resume-title">Languages</h3>
             <div class="resume-item">
-			<h3>Coral Technology (Tech4Health)</h3> <br>
-              <h4>Software Engineer (Java && Kotlin)</h4>
-              <h5>May 2022 - Present</h5>
-              <p><em>Naser City, Egypt </em></p>
               <ul>
-                <li>Participate in refactoring, maintaining and improving of a legacy - live running- code using Kotlin.</li>
-                <li>Developing new features using Koltin and Java. </li>
-                <li>Participate in designing system architecture and database schema</li>
-                <li>Participate in building a project to synchronize and integrate actions and data between the old legacy project and the new refactored one using Koltin</li>
-               <li>Using Vert.X to develop reactive modules</li>
-			</ul>
-			
-            </div>
-            <div class="resume-item">
-			<h3>TEZ TOUR Egypt</h3> <br>
-              <h4>Software Developer</h4>
-              <h5>2020 - 2022</h5>
-              <p><em>Giza, Egypt</em></p>
-              <ul>
-                <li>Used Agile model to provide analysis, design, use case scenarios, UMLs, coding best practices based on famous design patterns and testing mockups.</li>
-                <li>Developed INFOBOARD, operation, travel, hotel, reservation, guide, ERP, .. Applications</li>
-                <li>Helped my team to solve technical issues.</li>
-                <li>Participated in analysis, design and coding.</li>
-                <li>Developed the basic back-end structure using Java and Spring, Oracle.</li>
-                <li>Adding reports in the system.</li>
-                <li>Enhance the performance of the systems.</li>
+                <li><strong>Arabic</strong> — Native</li>
+                <li><strong>English</strong> — Professional Working Proficiency</li>
               </ul>
             </div>
-			
-			<div class="resume-item">
-			<h3>Pioneer Solutions</h3> <br>
-              <h4>Software Developer</h4>
-              <h5>JUN 2018 - OCT 2018</h5>
-              <p><em>cairo, Egypt</em></p>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Professional Experience</h3>
+
+            <div class="resume-item">
+              <h4>Senior Software Engineer</h4>
+              <h5>September 2023 - Present</h5>
+              <p><em>_VOIS (Vodafone Intelligent Solutions) — Ireland Market</em></p>
               <ul>
-                <li>Develop and Build new Desktop Applications , Customer support , Database design , Database implementation ,interface design.</li>
+                <li>Led large-scale microservices transformation for Ireland's telecommunications portal.</li>
+                <li>Architected &amp; delivered cloud-native solutions using <strong>Quarkus, Java 17, MongoDB, and Kubernetes</strong>, improving scalability and performance.</li>
+                <li>Designed journey services &amp; micro-sites leveraging <strong>ArgoCD (GitOps), Docker</strong>, and observability tools (Splunk, Dynatrace, Datadog).</li>
+                <li>Integrated enterprise standards including <strong>OSB (Oracle Service Bus)</strong> and <strong>TMF (Telecom Management Framework)</strong> for seamless API orchestration.</li>
+                <li>Implemented event-driven architecture using <strong>Kafka</strong>, enhancing system resilience and async processing.</li>
+                <li>Integrated headless CMS solutions (<strong>AEM, Contentful</strong>) for dynamic content delivery.</li>
+                <li>Optimized CI/CD pipelines (Jenkins, Docker, ArgoCD), reducing deployment time.</li>
+                <li>Led cross-functional collaboration with European teams (Accenture, Celfocus) and mentored junior &amp; mid-level developers.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Software Engineer (Java &amp; Kotlin)</h4>
+              <h5>May 2022 - September 2023</h5>
+              <p><em>Coral Technology (Tech4Health) — Remote (US-based)</em></p>
+              <ul>
+                <li>Developed reactive healthcare modules using <strong>Kotlin, Java, and Vert.x</strong>, improving responsiveness by 40%.</li>
+                <li>Migrated 15+ legacy PHP modules to Java using <strong>Spring Boot, JPA, Hibernate</strong> — 50% performance improvement.</li>
+                <li>Designed multi-channel notification system using <strong>Vert.x, SendGrid, RabbitMQ, Firebase, and MySQL</strong>.</li>
+                <li>Built centralized contact management serving providers, payers, and care management organizations.</li>
+                <li>Implemented advanced search using <strong>Elasticsearch</strong> for bundle management across US healthcare networks (70% faster retrieval).</li>
+                <li>Database change management with <strong>Liquibase</strong> (XML, YAML, JSON configurations).</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Java Software Developer</h4>
+              <h5>May 2020 - May 2022</h5>
+              <p><em>TEZ TOUR — Giza, Egypt</em></p>
+              <ul>
+                <li>Developed comprehensive tourism management platform using <strong>Spring Framework, JSP, JSTL, and Oracle Database</strong>, serving thousands of daily users.</li>
+                <li>Built scalable back-end architecture supporting reservation, hotel management, and ERP systems with high availability.</li>
+                <li>Implemented agile practices: use case scenarios, UML modeling, and industry-standard design patterns.</li>
+                <li>Integrated advanced reporting systems and optimized performance for high-traffic tourism applications during peak seasons.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Software Developer</h4>
+              <h5>June 2018 - October 2018</h5>
+              <p><em>Pioneer Solutions — Cairo, Egypt</em></p>
+              <ul>
+                <li>Developed desktop applications using <strong>Java and C#</strong> with a focus on UX and performance.</li>
+                <li>Designed efficient database schemas for enhanced retrieval and storage.</li>
+                <li>Provided technical customer support and built intuitive UIs following modern UX principles.</li>
               </ul>
             </div>
           </div>
@@ -481,6 +603,104 @@ excellent user</p>
       </div>
     </section><!-- End Resume Section -->
 
+    <!-- ======= Freelance / Contract Projects Section ======= -->
+    <section id="freelance" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Freelance &amp; Contract Projects</h2>
+          <p>Selected backend engagements delivered alongside my full-time roles.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="freelance-card">
+              <h4>Fractional Real Estate Investment Platform</h4>
+              <div class="client">Astek Group (Germany) — Saudi Arabia Project · Senior Backend Engineer (Part-time, 1 year)</div>
+              <ul>
+                <li>Delivered backend for a fractional real estate investment platform serving the Saudi market.</li>
+                <li>Designed multi-modular architecture using <strong>Kotlin and Ktor</strong>, improving scalability and maintainability.</li>
+                <li>Built secure APIs supporting the full investment lifecycle (browse, reserve, ownership, returns tracking).</li>
+                <li>Implemented database versioning with <strong>Flyway</strong> for safe schema evolution.</li>
+                <li>Ensured production readiness for a regulated fintech environment with secure transaction handling.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="freelance-card">
+              <h4>Real-Time Delivery Platform</h4>
+              <div class="client">Beetleware — Saudi Arabia Project · Senior Backend Engineer (Freelance, 6 months)</div>
+              <ul>
+                <li>Built a real-time delivery platform using <strong>Java, Spring Boot</strong>, and microservices architecture.</li>
+                <li>Designed APIs for dynamic delivery workflows and real-time order tracking.</li>
+                <li>Implemented secure authentication and authorization using <strong>Keycloak</strong>.</li>
+                <li>Applied distributed-systems best practices, improving scalability and fault tolerance.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="freelance-card">
+              <h4>Hately — Grocery Delivery Aggregator</h4>
+              <div class="client">Egyptian Project · Senior Java Backend Developer (8 months)</div>
+              <ul>
+                <li>Developed backend services for a grocery delivery platform aggregating products from multiple supermarkets into a unified catalog.</li>
+                <li>Designed APIs to manage product listings, orders, and customer requests across different vendors.</li>
+                <li>Integrated and normalized supermarket catalogs for consistent product data and availability.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="freelance-card">
+              <h4>Graduation Project — Transfer Experience</h4>
+              <div class="client">Menofia University · Database Designer, System Analyst &amp; Documentation Manager</div>
+              <ul>
+                <li>Performed full system &amp; user requirements analysis for a Flutter mobile application.</li>
+                <li>Designed the database schema and produced complete UML models (Use Case, Sequence, State diagrams).</li>
+                <li>Owned project documentation end-to-end. <strong>Final grade: Excellent</strong>.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Freelance Section -->
+
+    <!-- ======= Certifications Section ======= -->
+    <section id="certifications" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Certifications</h2>
+          <p>Continuing education and professional certifications.</p>
+        </div>
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="cert-card">
+              <i class="bi bi-shield-check"></i>
+              <h4>HIPAA Associate (HIPAAA)</h4>
+              <p class="text-muted mt-2" style="font-size: 13px;">Healthcare compliance certification covering privacy &amp; security rules.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="cert-card">
+              <i class="bi bi-microsoft"></i>
+              <h4>ITI — Microsoft Track</h4>
+              <p class="text-muted mt-2" style="font-size: 13px;">Information Technology Institute Microsoft technology specialization.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Certifications Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -488,6 +708,7 @@ excellent user</p>
 
         <div class="section-title">
           <h2>Contact</h2>
+          <p>Open to senior backend engineering roles, system design consulting, and freelance projects.</p>
         </div>
 
         <div class="row" data-aos="fade-in">
@@ -497,7 +718,7 @@ excellent user</p>
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>Giza , Egypt</p>
+                <p>Giza, Egypt</p>
               </div>
 
               <div class="email">
@@ -509,10 +730,10 @@ excellent user</p>
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+201025021692</p>
+                <p>+20 1025021692</p>
               </div>
 
-              <iframe src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=23 krestal palace mall haram streat&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+              <iframe src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Giza%2C%20Egypt&amp;t=&amp;z=11&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
             </div>
 
           </div>
@@ -525,16 +746,16 @@ excellent user</p>
                   <input type="text" name="name" class="form-control" id="name" required>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
+                  <label for="email">Your Email</label>
                   <input type="email" class="form-control" name="email" id="email" required>
                 </div>
               </div>
               <div class="form-group">
-                <label for="name">Subject</label>
+                <label for="subject">Subject</label>
                 <input type="text" class="form-control" name="subject" id="subject" required>
               </div>
               <div class="form-group">
-                <label for="name">Message</label>
+                <label for="message">Message</label>
                 <textarea class="form-control" name="message" rows="10" required></textarea>
               </div>
               <div class="my-3">
@@ -557,9 +778,9 @@ excellent user</p>
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Mohamed Ragab</span></strong>
+        &copy; Copyright <strong><span>Mohamed Ragab Elkazzaz</span></strong>. All Rights Reserved.
       </div>
-      <div class="credits">    
+      <div class="credits">
         Designed by <a href="https://www.linkedin.com/in/mohamed-ragab-86b521183/">Mohamed Ragab</a>
       </div>
     </div>
