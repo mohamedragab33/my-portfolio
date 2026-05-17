@@ -1,807 +1,1742 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mohamed Ragab Elkazzaz — Senior Java Backend Engineer</title>
-  <meta content="Mohamed Ragab Elkazzaz — Senior Java Backend Engineer with 6+ years of experience building scalable, cloud-native microservices across telecom, healthcare, fintech, and e-commerce." name="description">
-  <meta content="Java, Spring Boot, Quarkus, Microservices, Kubernetes, Kafka, Vert.x, Kotlin, Cloud Native, Senior Backend Engineer, System Design" name="keywords">
-  <meta property="og:title" content="Mohamed Ragab Elkazzaz — Senior Java Backend Engineer">
-  <meta property="og:description" content="6+ years building scalable cloud-native microservices. Java, Spring Boot, Quarkus, Kafka, Kubernetes.">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Senior Java Backend Engineer with 6+ years building scalable, cloud-native microservices across telecom, healthcare, fintech, and e-commerce." />
+  <meta name="keywords" content="Mohamed Ragab, Java, Spring Boot, Quarkus, Microservices, Kubernetes, Kafka, Kotlin, System Design, Senior Backend Engineer" />
+  <meta property="og:title" content="Mohamed Ragab Elkazzaz — Senior Java Backend Engineer" />
+  <meta property="og:description" content="6+ years building scalable cloud-native microservices. Java, Spring Boot, Quarkus, Kafka, Kubernetes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/profile.jpg" />
+  <link rel="icon" href="assets/img/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
   <style>
-    /* Custom enhancements */
-    .badge-tech {
-      display: inline-block;
-      padding: 6px 12px;
-      margin: 4px 4px 4px 0;
-      background: #f1f8ff;
-      color: #149ddd;
-      border: 1px solid #d8ecff;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: 500;
-      transition: all 0.3s ease;
+    :root {
+      --bg-0: #0a0a0f;
+      --bg-1: #0f0f17;
+      --bg-2: #161622;
+      --bg-3: #1c1c2a;
+      --surface: rgba(255, 255, 255, 0.03);
+      --surface-hover: rgba(255, 255, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-strong: rgba(255, 255, 255, 0.14);
+      --text: #e6e6ef;
+      --text-muted: #9ca0b3;
+      --text-dim: #6b7080;
+      --accent: #00d9a3;
+      --accent-2: #4f8cff;
+      --accent-3: #b14fff;
+      --gradient-1: linear-gradient(135deg, #00d9a3 0%, #4f8cff 100%);
+      --gradient-2: linear-gradient(135deg, #4f8cff 0%, #b14fff 100%);
+      --gradient-text: linear-gradient(135deg, #00d9a3 0%, #4f8cff 50%, #b14fff 100%);
+      --shadow-glow: 0 0 40px rgba(0, 217, 163, 0.15);
+      --radius: 14px;
+      --radius-lg: 20px;
     }
-    .badge-tech:hover {
-      background: #149ddd;
-      color: #fff;
-      transform: translateY(-2px);
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-0);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      font-size: 15px;
     }
-    .skills-group {
-      margin-bottom: 30px;
+
+    /* Animated background */
+    .bg-orbs {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
     }
-    .skills-group h4 {
-      font-size: 18px;
-      font-weight: 600;
-      color: #173b6c;
-      margin-bottom: 15px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid #149ddd;
-      display: inline-block;
-    }
-    .skills-group h4 i {
-      color: #149ddd;
-      margin-right: 8px;
-    }
-    .service-card {
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 30px rgba(63, 60, 86, 0.08);
-      height: 100%;
-      transition: all 0.3s ease;
-      margin-bottom: 30px;
-    }
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 30px rgba(63, 60, 86, 0.15);
-    }
-    .service-card .icon {
-      width: 64px;
-      height: 64px;
-      background: #149ddd;
+    .orb {
+      position: absolute;
       border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.35;
+      animation: float 20s infinite ease-in-out;
+    }
+    .orb-1 { width: 500px; height: 500px; background: #00d9a3; top: -100px; left: -150px; }
+    .orb-2 { width: 450px; height: 450px; background: #4f8cff; top: 40%; right: -100px; animation-delay: -5s; }
+    .orb-3 { width: 400px; height: 400px; background: #b14fff; bottom: -100px; left: 30%; animation-delay: -10s; }
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(50px, -50px) scale(1.1); }
+      66% { transform: translate(-30px, 30px) scale(0.95); }
+    }
+
+    .grid-pattern {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
+      z-index: 0;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    }
+
+    /* Navigation */
+    nav.topnav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 18px 0;
+      background: rgba(10, 10, 15, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .logo-mark {
+      width: 36px; height: 36px;
+      background: var(--gradient-1);
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-weight: 800;
+      color: #0a0a0f;
+      font-size: 16px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 8px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+    .nav-links a:hover { color: var(--text); background: var(--surface); }
+    .nav-cta {
+      padding: 10px 18px;
+      background: var(--text);
+      color: var(--bg-0);
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 10px 30px rgba(255,255,255,0.15); }
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    /* Layout */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 32px;
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
+      padding: 100px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
       margin-bottom: 20px;
     }
-    .service-card .icon i {
-      font-size: 28px;
-      color: #fff;
+    .section-label::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--accent);
     }
-    .service-card h4 {
-      font-size: 20px;
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(32px, 5vw, 48px);
       font-weight: 700;
-      color: #173b6c;
-      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 16px;
     }
-    .service-card p {
-      color: #6c757d;
+    .section-subtitle {
+      font-size: 17px;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin-bottom: 60px;
+    }
+
+    .gradient-text {
+      background: var(--gradient-text);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 60px;
+      position: relative;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .hero-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      background: rgba(0, 217, 163, 0.08);
+      border: 1px solid rgba(0, 217, 163, 0.2);
+      border-radius: 100px;
+      font-size: 13px;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 28px;
+    }
+    .status-dot {
+      width: 8px; height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(0,217,163,0.7); }
+      50% { box-shadow: 0 0 0 8px rgba(0,217,163,0); }
+    }
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(40px, 7vw, 76px);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+    .hero h1 .role {
+      display: block;
+      background: var(--gradient-text);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-typed {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 18px;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      min-height: 28px;
+    }
+    .hero-typed .cursor {
+      display: inline-block;
+      width: 2px;
+      height: 22px;
+      background: var(--accent);
+      vertical-align: middle;
+      margin-left: 3px;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+    .hero-desc {
+      font-size: 17px;
+      color: var(--text-muted);
+      max-width: 580px;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 26px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--gradient-1);
+      color: #0a0a0f;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,217,163,0.3); }
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid var(--border-strong);
+    }
+    .btn-secondary:hover { background: var(--surface-hover); border-color: var(--text-muted); }
+
+    .hero-socials { display: flex; gap: 14px; }
+    .social-icon {
+      width: 44px; height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 18px;
+      transition: all 0.25s ease;
+    }
+    .social-icon:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    /* Hero photo */
+    .hero-photo-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+    .photo-frame {
+      position: relative;
+      width: 380px;
+      height: 380px;
+    }
+    .photo-frame::before {
+      content: '';
+      position: absolute;
+      inset: -20px;
+      background: var(--gradient-text);
+      border-radius: 50%;
+      filter: blur(40px);
+      opacity: 0.3;
+      animation: rotate 12s linear infinite;
+    }
+    @keyframes rotate { to { transform: rotate(360deg); } }
+    .photo-frame img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--border-strong);
+      z-index: 2;
+    }
+    .photo-badge {
+      position: absolute;
+      background: var(--bg-2);
+      border: 1px solid var(--border-strong);
+      border-radius: 14px;
+      padding: 12px 18px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      z-index: 3;
+      backdrop-filter: blur(10px);
+    }
+    .photo-badge.b1 { top: 10%; right: -20px; animation: floaty 4s ease-in-out infinite; }
+    .photo-badge.b2 { bottom: 15%; left: -30px; animation: floaty 5s ease-in-out infinite reverse; }
+    .photo-badge.b3 { bottom: -10px; right: 10%; animation: floaty 6s ease-in-out infinite; }
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .photo-badge i { font-size: 18px; margin-right: 6px; vertical-align: middle; }
+    .photo-badge .b-label { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; }
+    .photo-badge .b-val { font-size: 14px; font-weight: 600; color: var(--text); }
+
+    /* Tech stack marquee */
+    .marquee-wrap {
+      margin-top: 60px;
+      padding: 24px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+      background: var(--surface);
+    }
+    .marquee-track {
+      display: flex;
+      gap: 60px;
+      animation: scroll 30s linear infinite;
+      white-space: nowrap;
+    }
+    @keyframes scroll {
+      to { transform: translateX(-50%); }
+    }
+    .marquee-item {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      color: var(--text-dim);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .marquee-item i { color: var(--accent); }
+
+    /* Stats */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .stat-card {
+      padding: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .stat-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+    }
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--gradient-1);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+    .stat-card:hover::before { transform: scaleX(1); }
+    .stat-icon {
+      width: 48px; height: 48px;
+      background: rgba(0, 217, 163, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+    .stat-value {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      color: var(--text-muted);
       font-size: 14px;
-      line-height: 1.6;
-      margin: 0;
-    }
-    .resume-item h5.location {
-      color: #149ddd;
-      font-style: italic;
       font-weight: 500;
     }
-    .freelance-card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 0 20px rgba(63, 60, 86, 0.08);
-      margin-bottom: 25px;
-      border-left: 4px solid #149ddd;
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
     }
-    .freelance-card h4 {
-      color: #173b6c;
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 5px;
+    .about-text p {
+      color: var(--text-muted);
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 20px;
     }
-    .freelance-card .client {
-      color: #149ddd;
+    .info-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 30px;
+    }
+    .info-list li {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 14px 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+    .info-list .label {
+      font-size: 11px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .info-list .value { font-size: 14px; color: var(--text); font-weight: 500; }
+
+    .about-card-stack { display: grid; gap: 16px; }
+    .feature-card {
+      padding: 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      transition: all 0.25s ease;
+    }
+    .feature-card:hover { background: var(--surface-hover); border-color: var(--border-strong); }
+    .feature-card .icon {
+      flex-shrink: 0;
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: var(--gradient-1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0a0a0f;
+      font-size: 20px;
+    }
+    .feature-card h4 { font-size: 16px; margin-bottom: 6px; color: var(--text); font-family: 'Space Grotesk', sans-serif; }
+    .feature-card p { font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6; }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .skill-cat {
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .skill-cat:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+    .skill-cat h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 17px;
       font-weight: 600;
-      font-size: 14px;
-      margin-bottom: 10px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    .freelance-card .duration {
-      color: #6c757d;
-      font-size: 13px;
-      font-style: italic;
+    .skill-cat h3 i {
+      color: var(--accent);
+      font-size: 20px;
+    }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      padding: 6px 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+      transition: all 0.2s ease;
+    }
+    .tag:hover {
+      background: rgba(0, 217, 163, 0.1);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      padding: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: radial-gradient(circle at top right, rgba(0,217,163,0.1), transparent 50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .service-card:hover::after { opacity: 1; }
+    .service-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+    }
+    .service-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--text-dim);
+      margin-bottom: 24px;
+      letter-spacing: 0.1em;
+    }
+    .service-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      margin-bottom: 14px;
+      font-weight: 600;
+      position: relative;
+      z-index: 1;
+    }
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.7;
+      position: relative;
+      z-index: 1;
+    }
+    .service-icon {
+      font-size: 32px;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    /* Timeline / Experience */
+    .timeline {
+      position: relative;
+      padding-left: 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 24px;
+      top: 8px; bottom: 8px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 70px;
+      padding-bottom: 50px;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-dot {
+      position: absolute;
+      left: 14px;
+      top: 8px;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--bg-2);
+      border: 2px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .timeline-dot::after {
+      content: '';
+      width: 8px; height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 12px var(--accent);
+    }
+    .timeline-card {
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      transition: all 0.3s ease;
+    }
+    .timeline-card:hover { border-color: var(--border-strong); transform: translateX(4px); }
+    .timeline-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
       margin-bottom: 12px;
+      align-items: center;
     }
-    .freelance-card ul {
-      padding-left: 20px;
-      margin: 0;
+    .timeline-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      padding: 4px 10px;
+      background: rgba(0, 217, 163, 0.1);
+      color: var(--accent);
+      border-radius: 6px;
+      font-weight: 500;
     }
-    .freelance-card ul li {
+    .timeline-location {
+      font-size: 13px;
+      color: var(--text-dim);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .timeline-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 22px;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+    .timeline-company {
+      color: var(--accent-2);
+      font-weight: 500;
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+    .timeline-card ul { list-style: none; padding: 0; }
+    .timeline-card ul li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 10px;
+      color: var(--text-muted);
       font-size: 14px;
-      color: #555;
-      margin-bottom: 6px;
+      line-height: 1.6;
+    }
+    .timeline-card ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+    .timeline-card ul li strong { color: var(--text); font-weight: 600; }
+    .tech-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .tech-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      padding: 3px 9px;
+      background: rgba(79, 140, 255, 0.08);
+      border: 1px solid rgba(79, 140, 255, 0.2);
+      border-radius: 6px;
+      color: var(--accent-2);
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .project-card {
+      padding: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .project-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+    }
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      gap: 16px;
+    }
+    .project-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 19px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .project-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      padding: 4px 10px;
+      background: rgba(177, 79, 255, 0.1);
+      border: 1px solid rgba(177, 79, 255, 0.25);
+      color: var(--accent-3);
+      border-radius: 6px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .project-client {
+      font-size: 13px;
+      color: var(--text-dim);
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    .project-card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .project-card ul li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 8px;
+      color: var(--text-muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .project-card ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+    .project-card ul li strong { color: var(--text); }
+
+    /* Certifications */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
     .cert-card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 0 20px rgba(63, 60, 86, 0.08);
+      padding: 36px 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
       text-align: center;
       transition: all 0.3s ease;
-      height: 100%;
     }
     .cert-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 25px rgba(63, 60, 86, 0.15);
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-glow);
     }
-    .cert-card i {
-      font-size: 40px;
-      color: #149ddd;
-      margin-bottom: 15px;
+    .cert-icon {
+      width: 64px; height: 64px;
+      margin: 0 auto 20px;
+      border-radius: 16px;
+      background: var(--gradient-1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0a0a0f;
+      font-size: 28px;
     }
     .cert-card h4 {
-      font-size: 16px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 17px;
       font-weight: 600;
-      color: #173b6c;
-      margin: 0;
+      margin-bottom: 8px;
     }
-    @media (max-width: 768px) {
-      .badge-tech { font-size: 12px; padding: 4px 10px; }
+    .cert-card p { font-size: 13px; color: var(--text-muted); }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .contact-info-list { display: grid; gap: 16px; }
+    .contact-info-card {
+      padding: 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    .contact-info-card:hover {
+      background: var(--surface-hover);
+      border-color: var(--accent);
+      transform: translateX(4px);
+    }
+    .contact-info-card .icon-box {
+      width: 52px; height: 52px;
+      background: rgba(0, 217, 163, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .contact-info-card .label { font-size: 12px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+    .contact-info-card .value { font-size: 15px; color: var(--text); font-weight: 500; }
+
+    .contact-form {
+      padding: 36px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--text);
+      font-size: 14px;
+      font-family: inherit;
+      transition: all 0.2s ease;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0, 217, 163, 0.15);
+    }
+    .form-group textarea { resize: vertical; min-height: 130px; }
+    .form-submit {
+      width: 100%;
+      padding: 14px;
+      background: var(--gradient-1);
+      color: #0a0a0f;
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .form-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,217,163,0.3); }
+
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 13px;
+      position: relative;
+      z-index: 1;
+    }
+    footer .made-with { margin-top: 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .stats-grid, .skills-grid, .services-grid, .certs-grid { grid-template-columns: repeat(2, 1fr); }
+      .projects-grid { grid-template-columns: 1fr; }
+      .photo-frame { width: 300px; height: 300px; }
+    }
+    @media (max-width: 720px) {
+      .container { padding: 0 20px; }
+      section { padding: 70px 0; }
+      .nav-links { display: none; }
+      .mobile-toggle { display: block; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px; left: 0; right: 0;
+        background: var(--bg-1);
+        border-bottom: 1px solid var(--border);
+        padding: 16px 24px;
+        gap: 4px;
+      }
+      .stats-grid, .skills-grid, .services-grid, .certs-grid, .form-row { grid-template-columns: 1fr; }
+      .info-list { grid-template-columns: 1fr; }
+      .timeline-item { padding-left: 50px; }
+      .timeline::before { left: 14px; }
+      .timeline-dot { left: 4px; width: 20px; height: 20px; }
+      .photo-frame { width: 260px; height: 260px; }
+      .photo-badge.b1, .photo-badge.b2, .photo-badge.b3 { display: none; }
+      .nav-cta { display: none; }
     }
   </style>
 </head>
-
 <body>
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="grid-pattern"></div>
 
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="Mohamed Ragab Elkazzaz" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Mohamed Ragab</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://github.com/mohamedragab33" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-          <a href="https://www.linkedin.com/in/mohamed-ragab-86b521183/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://twitter.com/midoo_ragab33" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="mailto:mohamed.ragab.dv@gmail.com" class="email"><i class="bx bx-envelope"></i></a>
-        </div>
-      </div>
-
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#facts" class="nav-link scrollto"><i class="bx bx-bar-chart-square"></i> <span>Facts</span></a></li>
-          <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-cog"></i> <span>Skills</span></a></li>
-          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-briefcase"></i> <span>Services</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file"></i> <span>Resume</span></a></li>
-          <li><a href="#freelance" class="nav-link scrollto"><i class="bx bx-code-alt"></i> <span>Projects</span></a></li>
-          <li><a href="#certifications" class="nav-link scrollto"><i class="bx bx-award"></i> <span>Certificates</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
+  <!-- NAV -->
+  <nav class="topnav">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-mark">MR</span>
+        <span>Mohamed Ragab</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Hire Me <i class="bi bi-arrow-right"></i></a>
+      <button class="mobile-toggle" id="mobileToggle"><i class="bi bi-list"></i></button>
     </div>
-  </header><!-- End Header -->
+  </nav>
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Mohamed Ragab Elkazzaz</h1>
-      <p>I'm a <span class="typed" data-typed-items="Senior Java Backend Engineer, Microservices Architect, Cloud-Native Developer, System Design Engineer, Kotlin Developer"></span></p>
-    </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>About</h2>
-          <p>Senior Java Backend Engineer with 6+ years of experience building scalable, cloud-native microservices across telecom, healthcare, fintech, and e-commerce. Strong expertise in system design, distributed systems, and CI/CD, with proven ability to deliver high-impact solutions and lead engineering teams.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="Mohamed Ragab">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Senior Java Backend Engineer &amp; Microservices Architect</h3>
-            <p class="fst-italic">
-              I architect and deliver cloud-native, event-driven systems for international clients across telecom, healthcare, and fintech. I have led migrations from monoliths to microservices, designed CI/CD pipelines using GitOps, and mentored engineering teams across multiple time zones.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Full Name:</strong> <span>Mohamed Ragab Elkazzaz</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+20 1025021692</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Giza, Egypt</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Experience:</strong> <span>6+ Years</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor of Information Systems</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>mohamed.ragab.dv@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Languages:</strong> <span>Arabic (Native), English</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Facts Section ======= -->
-    <section id="facts" class="facts">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Facts</h2>
-          <p>A snapshot of my professional journey building enterprise-scale systems.</p>
-        </div>
-
-        <div class="row no-gutters">
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-            <div class="count-box">
-              <i class="bi bi-clock-history"></i>
-              <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Years of Experience</strong></p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="count-box">
-              <i class="bi bi-diagram-3"></i>
-              <span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Microservices Delivered</strong></p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="count-box">
-              <i class="bi bi-building"></i>
-              <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Companies &amp; Clients</strong></p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="count-box">
-              <i class="bi bi-globe2"></i>
-              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Countries Served</strong></p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Facts Section -->
-
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Skills</h2>
-          <p>A comprehensive toolkit for designing, building, and operating production-grade distributed systems.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="skills-group">
-              <h4><i class="bi bi-code-slash"></i>Programming Languages</h4>
-              <span class="badge-tech">Java (8, 11, 17)</span>
-              <span class="badge-tech">Kotlin</span>
-              <span class="badge-tech">Python</span>
-              <span class="badge-tech">C# / .NET Core</span>
-              <span class="badge-tech">SQL / PL-SQL</span>
-              <span class="badge-tech">JavaScript</span>
-            </div>
-
-            <div class="skills-group">
-              <h4><i class="bi bi-layers"></i>Frameworks &amp; Backend</h4>
-              <span class="badge-tech">Spring Boot</span>
-              <span class="badge-tech">Spring MVC</span>
-              <span class="badge-tech">Spring Security</span>
-              <span class="badge-tech">Spring Data</span>
-              <span class="badge-tech">Spring WebFlux</span>
-              <span class="badge-tech">Quarkus</span>
-              <span class="badge-tech">Vert.x</span>
-              <span class="badge-tech">Ktor</span>
-              <span class="badge-tech">Hibernate / JPA</span>
-              <span class="badge-tech">Jakarta EE</span>
-            </div>
-
-            <div class="skills-group">
-              <h4><i class="bi bi-diagram-3"></i>System Design &amp; Architecture</h4>
-              <span class="badge-tech">Microservices</span>
-              <span class="badge-tech">Distributed Systems</span>
-              <span class="badge-tech">Event-Driven Architecture</span>
-              <span class="badge-tech">REST API Design</span>
-              <span class="badge-tech">Async Processing</span>
-              <span class="badge-tech">Resilience Patterns</span>
-              <span class="badge-tech">High Availability</span>
-              <span class="badge-tech">Scalability</span>
-            </div>
-
-            <div class="skills-group">
-              <h4><i class="bi bi-cloud"></i>Cloud &amp; DevOps</h4>
-              <span class="badge-tech">AWS</span>
-              <span class="badge-tech">Kubernetes (K8s)</span>
-              <span class="badge-tech">Docker</span>
-              <span class="badge-tech">Helm</span>
-              <span class="badge-tech">Jenkins</span>
-              <span class="badge-tech">ArgoCD (GitOps)</span>
-              <span class="badge-tech">Terraform</span>
-              <span class="badge-tech">CI/CD Pipelines</span>
-              <span class="badge-tech">SonarQube</span>
-              <span class="badge-tech">Nexus / JFrog</span>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="skills-group">
-              <h4><i class="bi bi-database"></i>Databases</h4>
-              <span class="badge-tech">Oracle</span>
-              <span class="badge-tech">MongoDB</span>
-              <span class="badge-tech">PostgreSQL</span>
-              <span class="badge-tech">MySQL</span>
-              <span class="badge-tech">SQL Server</span>
-              <span class="badge-tech">Redis</span>
-              <span class="badge-tech">H2</span>
-              <span class="badge-tech">Liquibase</span>
-              <span class="badge-tech">Flyway</span>
-            </div>
-
-            <div class="skills-group">
-              <h4><i class="bi bi-chat-dots"></i>Messaging &amp; Streaming</h4>
-              <span class="badge-tech">Apache Kafka</span>
-              <span class="badge-tech">RabbitMQ</span>
-              <span class="badge-tech">AMQP</span>
-            </div>
-
-            <div class="skills-group">
-              <h4><i class="bi bi-search"></i>Search &amp; Content</h4>
-              <span class="badge-tech">Elasticsearch</span>
-              <span class="badge-tech">Adobe Experience Manager (AEM)</span>
-              <span class="badge-tech">Contentful (Headless CMS)</span>
-            </div>
-
-            <div class="skills-group">
-              <h4><i class="bi bi-shield-lock"></i>Security &amp; Identity</h4>
-              <span class="badge-tech">Keycloak</span>
-              <span class="badge-tech">OAuth 2.0</span>
-              <span class="badge-tech">JWT</span>
-              <span class="badge-tech">Spring Security</span>
-            </div>
-
-            <div class="skills-group">
-              <h4><i class="bi bi-bar-chart"></i>Observability &amp; Monitoring</h4>
-              <span class="badge-tech">Dynatrace</span>
-              <span class="badge-tech">Splunk</span>
-              <span class="badge-tech">Datadog</span>
-              <span class="badge-tech">Prometheus</span>
-              <span class="badge-tech">Grafana</span>
-            </div>
-
-            <div class="skills-group">
-              <h4><i class="bi bi-tools"></i>Tools &amp; Testing</h4>
-              <span class="badge-tech">Git (GitHub, GitLab)</span>
-              <span class="badge-tech">Maven</span>
-              <span class="badge-tech">Gradle</span>
-              <span class="badge-tech">Swagger / OpenAPI</span>
-              <span class="badge-tech">JUnit 5</span>
-              <span class="badge-tech">Mockito</span>
-              <span class="badge-tech">Jira / Confluence</span>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Skills Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>What I Do</h2>
-          <p>End-to-end backend engineering services for products that need to scale.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up">
-            <div class="service-card">
-              <div class="icon"><i class="bi bi-diagram-3"></i></div>
-              <h4>Microservices Architecture</h4>
-              <p>Design and deliver cloud-native microservices using Spring Boot, Quarkus, and Vert.x — with clean domain boundaries, resilience patterns, and observability built in from day one.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card">
-              <div class="icon"><i class="bi bi-arrow-repeat"></i></div>
-              <h4>Monolith → Microservices Migration</h4>
-              <p>Decompose legacy monoliths into well-bounded services with zero-downtime cutover strategies, schema evolution (Liquibase / Flyway), and incremental rollout via feature flags.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card">
-              <div class="icon"><i class="bi bi-broadcast"></i></div>
-              <h4>Event-Driven Systems</h4>
-              <p>Kafka and RabbitMQ-based event pipelines with idempotent consumers, dead-letter handling, and exactly-once processing patterns for mission-critical workloads.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card">
-              <div class="icon"><i class="bi bi-cloud-upload"></i></div>
-              <h4>Cloud-Native &amp; Kubernetes</h4>
-              <p>Production-grade Kubernetes deployments with Helm, ArgoCD (GitOps), Docker, and AWS — including auto-scaling, health probes, and progressive delivery.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card">
-              <div class="icon"><i class="bi bi-gear-wide-connected"></i></div>
-              <h4>CI/CD &amp; DevOps</h4>
-              <p>Jenkins pipelines, GitOps with ArgoCD, automated quality gates with SonarQube, and artifact management with Nexus / JFrog — shipping faster with confidence.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card">
-              <div class="icon"><i class="bi bi-people"></i></div>
-              <h4>Technical Leadership &amp; Mentoring</h4>
-              <p>Lead distributed engineering teams across time zones, run code reviews and architecture governance, and mentor junior and mid-level engineers on Java best practices.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Resume</h2>
-          <p>6+ years engineering backend systems for telecom, healthcare, tourism, and desktop platforms.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Summary</h3>
-            <div class="resume-item pb-0">
-              <h4>Mohamed Ragab Elkazzaz</h4>
-              <p><em>Senior Java Backend Engineer with 6+ years of experience building scalable, cloud-native microservices across telecom, healthcare, fintech, and e-commerce. Strong expertise in system design, distributed systems, and CI/CD, with proven ability to deliver high-impact solutions and lead engineering teams.</em></p>
-              <ul>
-                <li>Giza, Egypt</li>
-                <li>+20 1025021692</li>
-                <li>mohamed.ragab.dv@gmail.com</li>
-              </ul>
-            </div>
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Bachelor of Information Systems</h4>
-              <h5>2016 - 2020</h5>
-              <p><em>Faculty of Computer and Information, Menofia University</em></p>
-              <p>Graduation Project Grade: <strong>Excellent</strong> — Role: Database Designer, System Analyst, Documentation Manager. Delivered system &amp; user requirements analysis, database design, and full UML modeling (Use Case, Sequence, State diagrams) for a Flutter application.</p>
-            </div>
-
-            <h3 class="resume-title">Languages</h3>
-            <div class="resume-item">
-              <ul>
-                <li><strong>Arabic</strong> — Native</li>
-                <li><strong>English</strong> — Professional Working Proficiency</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Professional Experience</h3>
-
-            <div class="resume-item">
-              <h4>Senior Software Engineer</h4>
-              <h5>September 2023 - Present</h5>
-              <p><em>_VOIS (Vodafone Intelligent Solutions) — Ireland Market</em></p>
-              <ul>
-                <li>Led large-scale microservices transformation for Ireland's telecommunications portal.</li>
-                <li>Architected &amp; delivered cloud-native solutions using <strong>Quarkus, Java 17, MongoDB, and Kubernetes</strong>, improving scalability and performance.</li>
-                <li>Designed journey services &amp; micro-sites leveraging <strong>ArgoCD (GitOps), Docker</strong>, and observability tools (Splunk, Dynatrace, Datadog).</li>
-                <li>Integrated enterprise standards including <strong>OSB (Oracle Service Bus)</strong> and <strong>TMF (Telecom Management Framework)</strong> for seamless API orchestration.</li>
-                <li>Implemented event-driven architecture using <strong>Kafka</strong>, enhancing system resilience and async processing.</li>
-                <li>Integrated headless CMS solutions (<strong>AEM, Contentful</strong>) for dynamic content delivery.</li>
-                <li>Optimized CI/CD pipelines (Jenkins, Docker, ArgoCD), reducing deployment time.</li>
-                <li>Led cross-functional collaboration with European teams (Accenture, Celfocus) and mentored junior &amp; mid-level developers.</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h4>Software Engineer (Java &amp; Kotlin)</h4>
-              <h5>May 2022 - September 2023</h5>
-              <p><em>Coral Technology (Tech4Health) — Remote (US-based)</em></p>
-              <ul>
-                <li>Developed reactive healthcare modules using <strong>Kotlin, Java, and Vert.x</strong>, improving responsiveness by 40%.</li>
-                <li>Migrated 15+ legacy PHP modules to Java using <strong>Spring Boot, JPA, Hibernate</strong> — 50% performance improvement.</li>
-                <li>Designed multi-channel notification system using <strong>Vert.x, SendGrid, RabbitMQ, Firebase, and MySQL</strong>.</li>
-                <li>Built centralized contact management serving providers, payers, and care management organizations.</li>
-                <li>Implemented advanced search using <strong>Elasticsearch</strong> for bundle management across US healthcare networks (70% faster retrieval).</li>
-                <li>Database change management with <strong>Liquibase</strong> (XML, YAML, JSON configurations).</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h4>Java Software Developer</h4>
-              <h5>May 2020 - May 2022</h5>
-              <p><em>TEZ TOUR — Giza, Egypt</em></p>
-              <ul>
-                <li>Developed comprehensive tourism management platform using <strong>Spring Framework, JSP, JSTL, and Oracle Database</strong>, serving thousands of daily users.</li>
-                <li>Built scalable back-end architecture supporting reservation, hotel management, and ERP systems with high availability.</li>
-                <li>Implemented agile practices: use case scenarios, UML modeling, and industry-standard design patterns.</li>
-                <li>Integrated advanced reporting systems and optimized performance for high-traffic tourism applications during peak seasons.</li>
-              </ul>
-            </div>
-
-            <div class="resume-item">
-              <h4>Software Developer</h4>
-              <h5>June 2018 - October 2018</h5>
-              <p><em>Pioneer Solutions — Cairo, Egypt</em></p>
-              <ul>
-                <li>Developed desktop applications using <strong>Java and C#</strong> with a focus on UX and performance.</li>
-                <li>Designed efficient database schemas for enhanced retrieval and storage.</li>
-                <li>Provided technical customer support and built intuitive UIs following modern UX principles.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Resume Section -->
-
-    <!-- ======= Freelance / Contract Projects Section ======= -->
-    <section id="freelance" class="services section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Freelance &amp; Contract Projects</h2>
-          <p>Selected backend engagements delivered alongside my full-time roles.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up">
-            <div class="freelance-card">
-              <h4>Fractional Real Estate Investment Platform</h4>
-              <div class="client">Astek Group (Germany) — Saudi Arabia Project · Senior Backend Engineer (Part-time, 1 year)</div>
-              <ul>
-                <li>Delivered backend for a fractional real estate investment platform serving the Saudi market.</li>
-                <li>Designed multi-modular architecture using <strong>Kotlin and Ktor</strong>, improving scalability and maintainability.</li>
-                <li>Built secure APIs supporting the full investment lifecycle (browse, reserve, ownership, returns tracking).</li>
-                <li>Implemented database versioning with <strong>Flyway</strong> for safe schema evolution.</li>
-                <li>Ensured production readiness for a regulated fintech environment with secure transaction handling.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="freelance-card">
-              <h4>Real-Time Delivery Platform</h4>
-              <div class="client">Beetleware — Saudi Arabia Project · Senior Backend Engineer (Freelance, 6 months)</div>
-              <ul>
-                <li>Built a real-time delivery platform using <strong>Java, Spring Boot</strong>, and microservices architecture.</li>
-                <li>Designed APIs for dynamic delivery workflows and real-time order tracking.</li>
-                <li>Implemented secure authentication and authorization using <strong>Keycloak</strong>.</li>
-                <li>Applied distributed-systems best practices, improving scalability and fault tolerance.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up">
-            <div class="freelance-card">
-              <h4>Hately — Grocery Delivery Aggregator</h4>
-              <div class="client">Egyptian Project · Senior Java Backend Developer (8 months)</div>
-              <ul>
-                <li>Developed backend services for a grocery delivery platform aggregating products from multiple supermarkets into a unified catalog.</li>
-                <li>Designed APIs to manage product listings, orders, and customer requests across different vendors.</li>
-                <li>Integrated and normalized supermarket catalogs for consistent product data and availability.</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="freelance-card">
-              <h4>Graduation Project — Transfer Experience</h4>
-              <div class="client">Menofia University · Database Designer, System Analyst &amp; Documentation Manager</div>
-              <ul>
-                <li>Performed full system &amp; user requirements analysis for a Flutter mobile application.</li>
-                <li>Designed the database schema and produced complete UML models (Use Case, Sequence, State diagrams).</li>
-                <li>Owned project documentation end-to-end. <strong>Final grade: Excellent</strong>.</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Freelance Section -->
-
-    <!-- ======= Certifications Section ======= -->
-    <section id="certifications" class="services">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Certifications</h2>
-          <p>Continuing education and professional certifications.</p>
-        </div>
-
-        <div class="row justify-content-center">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up">
-            <div class="cert-card">
-              <i class="bi bi-shield-check"></i>
-              <h4>HIPAA Associate (HIPAAA)</h4>
-              <p class="text-muted mt-2" style="font-size: 13px;">Healthcare compliance certification covering privacy &amp; security rules.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="cert-card">
-              <i class="bi bi-microsoft"></i>
-              <h4>ITI — Microsoft Track</h4>
-              <p class="text-muted mt-2" style="font-size: 13px;">Information Technology Institute Microsoft technology specialization.</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Certifications Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Open to senior backend engineering roles, system design consulting, and freelance projects.</p>
-        </div>
-
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>Giza, Egypt</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>mohamed.ragab.dv@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+20 1025021692</p>
-              </div>
-
-              <iframe src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Giza%2C%20Egypt&amp;t=&amp;z=11&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
-            </div>
-
-          </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="email">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <!-- HERO -->
+  <section class="hero" id="home">
     <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Mohamed Ragab Elkazzaz</span></strong>. All Rights Reserved.
-      </div>
-      <div class="credits">
-        Designed by <a href="https://www.linkedin.com/in/mohamed-ragab-86b521183/">Mohamed Ragab</a>
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-status"><span class="status-dot"></span> Available for new opportunities</div>
+          <h1>
+            Mohamed Ragab
+            <span class="role">Senior Java <br/>Backend Engineer.</span>
+          </h1>
+          <div class="hero-typed">
+            <span id="typed"></span><span class="cursor"></span>
+          </div>
+          <p class="hero-desc">
+            6+ years architecting scalable, cloud-native microservices for international clients across telecom, healthcare, fintech, and e-commerce. I design distributed systems, lead migrations, and ship production-grade code at scale.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Get in touch <i class="bi bi-arrow-right"></i></a>
+            <a href="#experience" class="btn btn-secondary">View my work <i class="bi bi-arrow-down"></i></a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/mohamedragab33" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/mohamed-ragab-86b521183/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="mailto:mohamed.ragab.dv@gmail.com" class="social-icon" aria-label="Email"><i class="bi bi-envelope"></i></a>
+            <a href="https://twitter.com/midoo_ragab33" target="_blank" rel="noopener" class="social-icon" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+        <div class="hero-photo-wrap">
+          <div class="photo-frame">
+            <img src="assets/img/profile.jpg" alt="Mohamed Ragab Elkazzaz" />
+            <div class="photo-badge b1">
+              <div class="b-label">Currently</div>
+              <div class="b-val"><i class="bi bi-briefcase"></i>VOIS · Ireland</div>
+            </div>
+            <div class="photo-badge b2">
+              <div class="b-label">Experience</div>
+              <div class="b-val"><i class="bi bi-stars" style="color:#00d9a3"></i>6+ Years</div>
+            </div>
+            <div class="photo-badge b3">
+              <div class="b-label">Stack</div>
+              <div class="b-val"><i class="bi bi-code-slash"></i>Java · Kotlin · K8s</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </footer><!-- End  Footer -->
+  </section>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- TECH MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="marquee-item"><i class="bi bi-stars"></i>Java 17</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>Spring Boot</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>Quarkus</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>Kotlin</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>Kubernetes</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>Kafka</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>MongoDB</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>AWS</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>ArgoCD</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>Vert.x</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>Elasticsearch</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>Docker</span>
+      <!-- duplicate for infinite loop -->
+      <span class="marquee-item"><i class="bi bi-stars"></i>Java 17</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>Spring Boot</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>Quarkus</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>Kotlin</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>Kubernetes</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>Kafka</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>MongoDB</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>AWS</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>ArgoCD</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>Vert.x</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>Elasticsearch</span>
+      <span class="marquee-item"><i class="bi bi-stars"></i>Docker</span>
+    </div>
+  </div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- STATS -->
+  <section id="stats" style="padding-top: 80px; padding-bottom: 40px;">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="bi bi-clock-history"></i></div>
+          <div class="stat-value gradient-text">6+</div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="bi bi-diagram-3"></i></div>
+          <div class="stat-value gradient-text">30+</div>
+          <div class="stat-label">Microservices Delivered</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="bi bi-building"></i></div>
+          <div class="stat-value gradient-text">7</div>
+          <div class="stat-label">Companies &amp; Clients</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="bi bi-globe2"></i></div>
+          <div class="stat-value gradient-text">5</div>
+          <div class="stat-label">Countries Served</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">About me</div>
+      <h2 class="section-title">Engineering <span class="gradient-text">systems that scale</span></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a Senior Java Backend Engineer based in Giza, Egypt, with 6+ years of building production systems for international clients. My work has spanned enterprise telecom for Vodafone Ireland, US healthcare platforms, Saudi fintech, and tourism systems serving thousands of daily users.</p>
+          <p>I specialize in <strong style="color:var(--text)">microservices architecture</strong>, <strong style="color:var(--text)">event-driven systems</strong>, and <strong style="color:var(--text)">cloud-native delivery</strong> with Kubernetes and GitOps. I lead engineering teams, run architecture reviews, and mentor mid- and junior-level developers on Java best practices.</p>
+          <ul class="info-list">
+            <li><span class="label">Location</span><span class="value">Giza, Egypt</span></li>
+            <li><span class="label">Experience</span><span class="value">6+ Years</span></li>
+            <li><span class="label">Languages</span><span class="value">Arabic, English</span></li>
+            <li><span class="label">Education</span><span class="value">Bachelor — Menofia University</span></li>
+            <li><span class="label">Email</span><span class="value">mohamed.ragab.dv@gmail.com</span></li>
+            <li><span class="label">Phone</span><span class="value">+20 1025021692</span></li>
+          </ul>
+        </div>
+        <div class="about-card-stack">
+          <div class="feature-card">
+            <div class="icon"><i class="bi bi-diagram-3"></i></div>
+            <div>
+              <h4>Microservices &amp; Distributed Systems</h4>
+              <p>Designing well-bounded services with resilience patterns, async processing, and Kafka-based event flows.</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="icon"><i class="bi bi-cloud-upload"></i></div>
+            <div>
+              <h4>Cloud-Native &amp; Kubernetes</h4>
+              <p>Production K8s deployments with Helm, ArgoCD (GitOps), Docker, and AWS — including auto-scaling and progressive delivery.</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="icon"><i class="bi bi-people"></i></div>
+            <div>
+              <h4>Technical Leadership</h4>
+              <p>Mentoring engineers across time zones, running code reviews, and driving architecture governance across distributed teams.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label">Tech stack</div>
+      <h2 class="section-title">Tools I use to <span class="gradient-text">ship at scale</span></h2>
+      <p class="section-subtitle">A practical toolkit refined across telecom, healthcare, and fintech production systems.</p>
+
+      <div class="skills-grid">
+        <div class="skill-cat">
+          <h3><i class="bi bi-code-slash"></i>Languages</h3>
+          <div class="skill-tags">
+            <span class="tag">Java 8/11/17</span>
+            <span class="tag">Kotlin</span>
+            <span class="tag">Python</span>
+            <span class="tag">C# / .NET Core</span>
+            <span class="tag">SQL / PL-SQL</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3><i class="bi bi-layers"></i>Frameworks</h3>
+          <div class="skill-tags">
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Spring Security</span>
+            <span class="tag">Spring Data</span>
+            <span class="tag">Spring WebFlux</span>
+            <span class="tag">Quarkus</span>
+            <span class="tag">Vert.x</span>
+            <span class="tag">Ktor</span>
+            <span class="tag">Hibernate / JPA</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3><i class="bi bi-diagram-3"></i>Architecture</h3>
+          <div class="skill-tags">
+            <span class="tag">Microservices</span>
+            <span class="tag">Event-Driven</span>
+            <span class="tag">Distributed Systems</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">Async Processing</span>
+            <span class="tag">Resilience Patterns</span>
+            <span class="tag">High Availability</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3><i class="bi bi-cloud"></i>Cloud &amp; DevOps</h3>
+          <div class="skill-tags">
+            <span class="tag">AWS</span>
+            <span class="tag">Kubernetes</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Helm</span>
+            <span class="tag">Jenkins</span>
+            <span class="tag">ArgoCD</span>
+            <span class="tag">Terraform</span>
+            <span class="tag">SonarQube</span>
+            <span class="tag">Nexus / JFrog</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3><i class="bi bi-database"></i>Databases</h3>
+          <div class="skill-tags">
+            <span class="tag">Oracle</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">SQL Server</span>
+            <span class="tag">Redis</span>
+            <span class="tag">Liquibase</span>
+            <span class="tag">Flyway</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3><i class="bi bi-chat-dots"></i>Messaging &amp; Search</h3>
+          <div class="skill-tags">
+            <span class="tag">Apache Kafka</span>
+            <span class="tag">RabbitMQ</span>
+            <span class="tag">AMQP</span>
+            <span class="tag">Elasticsearch</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3><i class="bi bi-shield-lock"></i>Security &amp; CMS</h3>
+          <div class="skill-tags">
+            <span class="tag">Keycloak</span>
+            <span class="tag">OAuth 2.0</span>
+            <span class="tag">JWT</span>
+            <span class="tag">Adobe AEM</span>
+            <span class="tag">Contentful</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3><i class="bi bi-bar-chart"></i>Observability</h3>
+          <div class="skill-tags">
+            <span class="tag">Dynatrace</span>
+            <span class="tag">Splunk</span>
+            <span class="tag">Datadog</span>
+            <span class="tag">Prometheus</span>
+            <span class="tag">Grafana</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <h3><i class="bi bi-tools"></i>Tooling</h3>
+          <div class="skill-tags">
+            <span class="tag">Git / GitHub</span>
+            <span class="tag">Maven</span>
+            <span class="tag">Gradle</span>
+            <span class="tag">Swagger / OpenAPI</span>
+            <span class="tag">JUnit 5</span>
+            <span class="tag">Mockito</span>
+            <span class="tag">Jira</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-label">What I do</div>
+      <h2 class="section-title">End-to-end backend <span class="gradient-text">engineering services</span></h2>
+      <p class="section-subtitle">From greenfield architecture to legacy modernization — I deliver production-grade systems.</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-num">01 / 06</div>
+          <div class="service-icon"><i class="bi bi-diagram-3"></i></div>
+          <h3>Microservices Architecture</h3>
+          <p>Design and ship cloud-native microservices with Spring Boot, Quarkus, and Vert.x — clean domain boundaries, resilience patterns, and observability built in.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">02 / 06</div>
+          <div class="service-icon"><i class="bi bi-arrow-repeat"></i></div>
+          <h3>Monolith → Microservices</h3>
+          <p>Decompose legacy monoliths into well-bounded services with zero-downtime cutover, schema evolution via Liquibase/Flyway, and incremental rollout.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">03 / 06</div>
+          <div class="service-icon"><i class="bi bi-broadcast"></i></div>
+          <h3>Event-Driven Systems</h3>
+          <p>Kafka and RabbitMQ-based event pipelines with idempotent consumers, dead-letter handling, and exactly-once patterns for mission-critical workloads.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">04 / 06</div>
+          <div class="service-icon"><i class="bi bi-cloud-upload"></i></div>
+          <h3>Cloud-Native &amp; K8s</h3>
+          <p>Production Kubernetes with Helm, ArgoCD (GitOps), Docker, and AWS — auto-scaling, health probes, blue/green &amp; canary deploys.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">05 / 06</div>
+          <div class="service-icon"><i class="bi bi-gear-wide-connected"></i></div>
+          <h3>CI/CD &amp; DevOps</h3>
+          <p>Jenkins pipelines, GitOps with ArgoCD, automated quality gates with SonarQube, and artifact management with Nexus / JFrog.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">06 / 06</div>
+          <div class="service-icon"><i class="bi bi-people"></i></div>
+          <h3>Tech Leadership</h3>
+          <p>Lead distributed engineering teams, run code reviews and architecture governance, mentor junior &amp; mid-level engineers on Java best practices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-label">Experience</div>
+      <h2 class="section-title">Career <span class="gradient-text">journey</span></h2>
+      <p class="section-subtitle">Six years across telecom, healthcare, tourism, and desktop platforms.</p>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">Sep 2023 — Present</span>
+              <span class="timeline-location"><i class="bi bi-geo-alt"></i>Ireland Market · Remote</span>
+            </div>
+            <h3>Senior Software Engineer</h3>
+            <div class="timeline-company">_VOIS · Vodafone Intelligent Solutions</div>
+            <ul>
+              <li>Led <strong>large-scale microservices transformation</strong> for Ireland's telecommunications portal.</li>
+              <li>Architected cloud-native solutions using <strong>Quarkus, Java 17, MongoDB, and Kubernetes</strong>.</li>
+              <li>Designed journey services &amp; micro-sites leveraging <strong>ArgoCD (GitOps), Docker</strong>, with Splunk/Dynatrace/Datadog observability.</li>
+              <li>Integrated <strong>OSB (Oracle Service Bus)</strong> and <strong>TMF (Telecom Management Framework)</strong> for seamless API orchestration.</li>
+              <li>Implemented <strong>Kafka-based event-driven architecture</strong>, enhancing resilience and async processing.</li>
+              <li>Integrated headless CMS (<strong>AEM, Contentful</strong>) for dynamic content delivery.</li>
+              <li>Led cross-functional collaboration with European teams (Accenture, Celfocus) and mentored developers.</li>
+            </ul>
+            <div class="tech-pills">
+              <span class="tech-pill">Quarkus</span>
+              <span class="tech-pill">Java 17</span>
+              <span class="tech-pill">MongoDB</span>
+              <span class="tech-pill">Kubernetes</span>
+              <span class="tech-pill">Kafka</span>
+              <span class="tech-pill">ArgoCD</span>
+              <span class="tech-pill">AEM</span>
+              <span class="tech-pill">Contentful</span>
+              <span class="tech-pill">Dynatrace</span>
+              <span class="tech-pill">Splunk</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">May 2022 — Sep 2023</span>
+              <span class="timeline-location"><i class="bi bi-geo-alt"></i>Remote · US-based</span>
+            </div>
+            <h3>Software Engineer (Java &amp; Kotlin)</h3>
+            <div class="timeline-company">Coral Technology · Tech4Health</div>
+            <ul>
+              <li>Developed reactive healthcare modules using <strong>Kotlin, Java, and Vert.x</strong>, improving responsiveness by 40%.</li>
+              <li>Migrated <strong>15+ legacy PHP modules</strong> to Java with Spring Boot, JPA, Hibernate — 50% performance gain.</li>
+              <li>Designed multi-channel notification system with <strong>Vert.x, SendGrid, RabbitMQ, Firebase</strong>.</li>
+              <li>Built centralized contact management serving providers, payers, and care management organizations.</li>
+              <li>Implemented advanced search with <strong>Elasticsearch</strong> across US healthcare networks (70% faster retrieval).</li>
+              <li>Database change management with <strong>Liquibase</strong> (XML, YAML, JSON).</li>
+            </ul>
+            <div class="tech-pills">
+              <span class="tech-pill">Kotlin</span>
+              <span class="tech-pill">Vert.x</span>
+              <span class="tech-pill">Spring Boot</span>
+              <span class="tech-pill">Elasticsearch</span>
+              <span class="tech-pill">RabbitMQ</span>
+              <span class="tech-pill">MySQL</span>
+              <span class="tech-pill">Liquibase</span>
+              <span class="tech-pill">Firebase</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">May 2020 — May 2022</span>
+              <span class="timeline-location"><i class="bi bi-geo-alt"></i>Giza, Egypt</span>
+            </div>
+            <h3>Java Software Developer</h3>
+            <div class="timeline-company">TEZ TOUR</div>
+            <ul>
+              <li>Built tourism management platform on <strong>Spring Framework, JSP, JSTL, Oracle DB</strong>, serving thousands of daily users.</li>
+              <li>Engineered back-end for reservation, hotel management, and ERP systems with high availability.</li>
+              <li>Applied agile practices: use case scenarios, UML modeling, and standard design patterns.</li>
+              <li>Optimized performance for high-traffic seasonal peaks; integrated advanced reporting systems.</li>
+            </ul>
+            <div class="tech-pills">
+              <span class="tech-pill">Spring</span>
+              <span class="tech-pill">Oracle</span>
+              <span class="tech-pill">JSP/JSTL</span>
+              <span class="tech-pill">ERP</span>
+              <span class="tech-pill">UML</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">Jun 2018 — Oct 2018</span>
+              <span class="timeline-location"><i class="bi bi-geo-alt"></i>Cairo, Egypt</span>
+            </div>
+            <h3>Software Developer</h3>
+            <div class="timeline-company">Pioneer Solutions</div>
+            <ul>
+              <li>Developed desktop applications using <strong>Java and C#</strong> with a focus on UX and performance.</li>
+              <li>Designed efficient database schemas for enhanced retrieval and storage.</li>
+              <li>Built intuitive UIs following modern UX principles and accessibility standards.</li>
+            </ul>
+            <div class="tech-pills">
+              <span class="tech-pill">Java</span>
+              <span class="tech-pill">C#</span>
+              <span class="tech-pill">Desktop</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS / FREELANCE -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">Freelance &amp; Contract</div>
+      <h2 class="section-title">Selected <span class="gradient-text">side projects</span></h2>
+      <p class="section-subtitle">Backend engagements delivered alongside my full-time roles.</p>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Fractional Real Estate Investment Platform</h3>
+            <span class="project-tag">Fintech · 1 year</span>
+          </div>
+          <p class="project-client">Astek Group (Germany) — Saudi Arabia Project · Senior Backend Engineer (Part-time)</p>
+          <ul>
+            <li>Built fractional real estate investment platform serving the <strong>Saudi market</strong>.</li>
+            <li>Designed multi-modular architecture using <strong>Kotlin and Ktor</strong>.</li>
+            <li>Secure APIs covering full investment lifecycle: browse, reserve, ownership, returns tracking.</li>
+            <li>Database versioning with <strong>Flyway</strong>; production-ready for regulated fintech.</li>
+          </ul>
+          <div class="tech-pills" style="margin-top:18px;padding-top:14px;">
+            <span class="tech-pill">Kotlin</span>
+            <span class="tech-pill">Ktor</span>
+            <span class="tech-pill">Flyway</span>
+            <span class="tech-pill">PostgreSQL</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Real-Time Delivery Platform</h3>
+            <span class="project-tag">Logistics · 6 months</span>
+          </div>
+          <p class="project-client">Beetleware — Saudi Arabia Project · Senior Backend Engineer (Freelance)</p>
+          <ul>
+            <li>Real-time delivery platform with <strong>Java, Spring Boot</strong>, microservices architecture.</li>
+            <li>APIs for dynamic delivery workflows and real-time order tracking.</li>
+            <li>Secure authentication &amp; authorization with <strong>Keycloak</strong>.</li>
+            <li>Distributed systems best practices for scalability and fault tolerance.</li>
+          </ul>
+          <div class="tech-pills" style="margin-top:18px;padding-top:14px;">
+            <span class="tech-pill">Spring Boot</span>
+            <span class="tech-pill">Microservices</span>
+            <span class="tech-pill">Keycloak</span>
+            <span class="tech-pill">Kafka</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Hately — Grocery Delivery Aggregator</h3>
+            <span class="project-tag">E-commerce · 8 months</span>
+          </div>
+          <p class="project-client">Egyptian Project · Senior Java Backend Developer</p>
+          <ul>
+            <li>Backend for grocery delivery aggregating products from <strong>multiple supermarkets</strong> into a unified catalog.</li>
+            <li>APIs for product listings, orders, and customer requests across vendors.</li>
+            <li>Integrated &amp; normalized supermarket catalogs for consistent data and availability.</li>
+          </ul>
+          <div class="tech-pills" style="margin-top:18px;padding-top:14px;">
+            <span class="tech-pill">Java</span>
+            <span class="tech-pill">Spring Boot</span>
+            <span class="tech-pill">PostgreSQL</span>
+            <span class="tech-pill">REST APIs</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Transfer Experience — Graduation Project</h3>
+            <span class="project-tag">Academic · Excellent</span>
+          </div>
+          <p class="project-client">Menofia University · Database Designer, Analyst &amp; Documentation Manager</p>
+          <ul>
+            <li>Full system &amp; user requirements analysis for a <strong>Flutter mobile application</strong>.</li>
+            <li>Designed database schema and produced complete UML models (Use Case, Sequence, State).</li>
+            <li>Owned project documentation end-to-end. <strong>Final grade: Excellent</strong>.</li>
+          </ul>
+          <div class="tech-pills" style="margin-top:18px;padding-top:14px;">
+            <span class="tech-pill">UML</span>
+            <span class="tech-pill">Database Design</span>
+            <span class="tech-pill">Flutter</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="container">
+      <div class="section-label">Certifications</div>
+      <h2 class="section-title">Continuous <span class="gradient-text">learning</span></h2>
+
+      <div class="certs-grid">
+        <div class="cert-card">
+          <div class="cert-icon"><i class="bi bi-shield-check"></i></div>
+          <h4>HIPAA Associate</h4>
+          <p>Healthcare compliance certification covering privacy &amp; security rules.</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon"><i class="bi bi-microsoft"></i></div>
+          <h4>ITI — Microsoft Track</h4>
+          <p>Information Technology Institute Microsoft technology specialization.</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon"><i class="bi bi-mortarboard"></i></div>
+          <h4>B.Sc. Information Systems</h4>
+          <p>Menofia University, 2016 – 2020. Graduation project grade: Excellent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">Get in touch</div>
+      <h2 class="section-title">Let's build <span class="gradient-text">something great</span></h2>
+      <p class="section-subtitle">Open to senior backend roles, system design consulting, and freelance projects. I usually reply within 24 hours.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info-list">
+          <a href="mailto:mohamed.ragab.dv@gmail.com" class="contact-info-card">
+            <div class="icon-box"><i class="bi bi-envelope"></i></div>
+            <div>
+              <div class="label">Email</div>
+              <div class="value">mohamed.ragab.dv@gmail.com</div>
+            </div>
+          </a>
+          <a href="tel:+201025021692" class="contact-info-card">
+            <div class="icon-box"><i class="bi bi-telephone"></i></div>
+            <div>
+              <div class="label">Phone / WhatsApp</div>
+              <div class="value">+20 1025021692</div>
+            </div>
+          </a>
+          <div class="contact-info-card">
+            <div class="icon-box"><i class="bi bi-geo-alt"></i></div>
+            <div>
+              <div class="label">Location</div>
+              <div class="value">Giza, Egypt</div>
+            </div>
+          </div>
+          <a href="https://www.linkedin.com/in/mohamed-ragab-86b521183/" target="_blank" rel="noopener" class="contact-info-card">
+            <div class="icon-box"><i class="bi bi-linkedin"></i></div>
+            <div>
+              <div class="label">LinkedIn</div>
+              <div class="value">mohamed-ragab-86b521183</div>
+            </div>
+          </a>
+          <a href="https://github.com/mohamedragab33" target="_blank" rel="noopener" class="contact-info-card">
+            <div class="icon-box"><i class="bi bi-github"></i></div>
+            <div>
+              <div class="label">GitHub</div>
+              <div class="value">@mohamedragab33</div>
+            </div>
+          </a>
+        </div>
+
+        <form class="contact-form" action="forms/contact.php" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" name="name" id="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" name="email" id="email" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" name="subject" id="subject" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" rows="6" required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message <i class="bi bi-send"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div>&copy; <span id="year"></span> Mohamed Ragab Elkazzaz · All rights reserved.</div>
+      <div class="made-with">Built with passion · Java &amp; coffee ☕</div>
+    </div>
+  </footer>
+
+  <script>
+    // Typed effect
+    (function(){
+      const words = [
+        'Architecting cloud-native microservices.',
+        'Building event-driven systems with Kafka.',
+        'Designing distributed systems at scale.',
+        'Leading engineering teams across time zones.',
+        'Migrating monoliths to Kubernetes.'
+      ];
+      const el = document.getElementById('typed');
+      let wi = 0, ci = 0, deleting = false;
+      function tick() {
+        const word = words[wi];
+        if (!deleting) {
+          el.textContent = word.slice(0, ++ci);
+          if (ci === word.length) { deleting = true; setTimeout(tick, 1800); return; }
+        } else {
+          el.textContent = word.slice(0, --ci);
+          if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; }
+        }
+        setTimeout(tick, deleting ? 30 : 60);
+      }
+      tick();
+    })();
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav
+    const toggle = document.getElementById('mobileToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.addEventListener('click', e => {
+      if (e.target.tagName === 'A') links.classList.remove('open');
+    });
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.stat-card, .skill-cat, .service-card, .timeline-item, .project-card, .cert-card, .feature-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
 
 </body>
-
 </html>
